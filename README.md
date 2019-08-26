@@ -9,9 +9,10 @@ RetrofitManager.getInstance().init();
 
 新建一个TokenModel继承SinglePageModel,此处对应MVP架构的Model层
 
-public class TokenModel extends SinglePageModel {
-    private TokenResponse tokenResponse;
 
+public class TokenModel extends SinglePageModel {
+
+    private TokenResponse tokenResponse;
     public TokenResponse getTokenResponse(){
         return tokenResponse;
     }
@@ -43,3 +44,10 @@ public class TokenModel extends SinglePageModel {
 获取到数据后，具体逻辑业务处理放在P层处理，类似的会有TokenPresenter,该类实现IModelListener接口，在其回调方法onLoadFinish里面处理具体逻辑，该层持有Model层的引用以及view层（即activity或fragment）的引用，在其构造方法先注册这个接口,调用其基类BaseModel的register方法
 
 发起请求，直接调用SinglePageModel或者MultiPageModel的sendNetworkRequest方法
+
+
+待补充：
+
+1.异常处理
+
+2.缓存
