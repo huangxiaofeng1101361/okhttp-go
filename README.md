@@ -46,6 +46,8 @@ public class TokenModel extends SinglePageModel {
 发起请求，直接调用SinglePageModel或者MultiPageModel的sendNetworkRequest方法
 
 
+具体使用方法可以参考我的CSDN：https://blog.csdn.net/Only_Studio/article/details/100083586
+
 待补充：
 
 1.异常处理
